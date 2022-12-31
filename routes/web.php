@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ClassroomController;
+use App\Http\Controllers\ClassroomStudentController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\RoleController;
 use App\Http\Controllers\SectionController;
@@ -81,6 +82,6 @@ Route::patch('/exams/{exam}',[ExamController::class, 'update'])->name('exams.upd
 Route::delete('/exams/{exam}',[ExamController::class, 'destroy'])->name('exams.destroy');
 
 //Student-Classroom
-// Route::get('/classrooms_students',[ClassroomStudentController::class, 'index'])->name('classrooms_students.index');
-// Route::get('/classrooms_students/{student}/create',[ClassroomStudentController::class, 'create'])->name('classrooms_students.create');
-// Route::post('/classrooms_students/{student}',[ClassroomStudentController::class, 'store'])->name('classrooms_students.store');
+Route::get('/classrooms_students',[ClassroomStudentController::class, 'index'])->name('classrooms_students.index');
+Route::get('/classrooms_students/{user}/create',[ClassroomStudentController::class, 'create'])->name('classrooms_students.create');
+Route::post('/classrooms_students/{user}',[ClassroomStudentController::class, 'store'])->name('classrooms_students.store');

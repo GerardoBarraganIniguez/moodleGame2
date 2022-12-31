@@ -28,7 +28,7 @@ class SubjectController extends Controller
             'name' => $request->name
         ]);
 
-        return view('adminUser.main');   
+        return redirect()->route('subjects.index');
     }
 
     public function edit(Subject $subject)
