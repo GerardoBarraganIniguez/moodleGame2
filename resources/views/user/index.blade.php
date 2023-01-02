@@ -8,19 +8,23 @@
     rel="stylesheet" href="/css/table.css"
 @endsection
 
-@section('content')
+@section('header')
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <a class="navbar-brand" href="#">
-      <img src="\img\a.png" alt="" class="custom-img">
-    </a>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav">
-        <li class="nav-item active">
-          <a class="nav-link" href="#" style="padding-left: 1140px">Cerrar sesión</a>
-        </li>
-      </ul>
-    </div>
-  </nav>
+  <a class="navbar-brand" href="#">
+    <img src="\img\a.png" alt="" class="custom-img">
+  </a>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link" href="#" style="padding-left: 1140px">Cerrar sesión</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+@endsection
+
+@section('content')
+
 
   <div class="frame" style="padding-top: 15px">
   <div class="container">
@@ -74,6 +78,7 @@
             @endforeach
           </tbody>
         </table>
+        {{  $users->links()  }}
         <a href="{{ route('users.create') }}" class="btn btn-primary">Agregar nuevo usuario</a>
       </div>
 @endsection
