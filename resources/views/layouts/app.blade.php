@@ -7,6 +7,7 @@
         <link @yield('css')>
         <title>@yield('title')</title>
     </head>
+    <header>@yield('header')</header>
     <body>
         {{-- <h1>@yield('title')</h1> --}}
         @yield('content')
