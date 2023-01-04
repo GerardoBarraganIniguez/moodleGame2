@@ -1,5 +1,4 @@
 @csrf
-
 <form>
   <div class="form-group">
     <label for="name">Código de la sección</label>
