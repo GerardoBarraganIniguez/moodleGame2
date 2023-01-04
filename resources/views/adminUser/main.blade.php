@@ -8,24 +8,32 @@
     rel="stylesheet" href="/css/app.css"
 @endsection
 
-
-@section('content')
-<div class="container-fluid h-100">
-    <div class="row h-100">
-        <div class="sidebar">
-            <div class="sidebar-list1">
-                <h5 style="margin:10px">Acciones</h5>
-                <a href="{{ route('users.index') }}">Administrar Usuarios</a><br>
-                <a href="{{ route('subjects.index') }}">Administrar Materias</a><br>
-                <a href="{{ route('sections.index') }}">Administrar Secciones</a><br>
-                <a href="{{ route('classrooms.index') }}">Administrar Clases</a><br>
-            </div>
-            <div class="sidebar-bottom">
-                <p>Bienvenido {{ auth()->user()->name }}</p>
-                <a href="#" style="color: white">Cerrar sesión</a>
-            </div>
-        </div>
-    </div>
-</div>
-
+@section('user')
+    {{ auth()->user()->name }}
 @endsection
+
+@section('sidebar-options')
+    <ul class="nav nav-pills flex-column">
+        <li class="nav-item">
+          <a href="{{ route('users.index') }}" class="nav-link text-white mb-3 option">
+            Administrar Usuarios
+          </a>
+        </li>
+        <li>
+          <a href="{{ route('subjects.index') }}" class="nav-link text-white mb-3 option">
+            Administrar Materias
+          </a>
+        </li>
+        <li >
+          <a href="{{ route('sections.index') }}" class="nav-link text-white mb-3 option">
+            Administrar Secciones
+          </a>
+        </li>
+        <li>
+          <a href="{{ route('classrooms.index') }}" class="nav-link text-white option">
+            Clases
+          </a>
+        </li>
+      </ul>
+@endsection
+

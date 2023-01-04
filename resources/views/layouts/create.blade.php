@@ -15,16 +15,7 @@
         </div> 
       </nav>
     </header>
-    <body class="overflow-hidden">
-        {{-- @yield('content') --}}
-        <aside class="container-fluid bg-dark text-white min-vh-100 m-0 " style="width: 200px">
-            <div class="row text-center">
-                <div class="col p-0">
-                    <h2 class="mb-0 mt-2">@yield('user')</h2>
-                </div>
-            </div>
-            <hr>
-            @yield('sidebar-options')
-        </aside>
+    <body>
+        @yield('content')
     </body>
 </html>
