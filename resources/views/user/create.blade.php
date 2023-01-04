@@ -4,6 +4,10 @@
     Crear Usuarios
 @endsection
 
+@section('css')
+    rel="stylesheet" href="/css/form.css"
+@endsection
+
 @section('content')
     <form action="{{ route('users.store') }}" method="POST" autocomplete="off">
         <x-user-form-body :roles="$roles"/>
