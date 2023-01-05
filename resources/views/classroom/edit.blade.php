@@ -1,7 +1,7 @@
-@extends('layouts.app')
+@extends('layouts.create')
 
 @section('title')
-    Editar Clase <i>{{ $classroom->id }}</i>
+    Editar Clase {{ $classroom->id }}
 @endsection
 
 @section('css')
@@ -17,7 +17,6 @@
             <form action="{{ route('classrooms.update', $classroom) }}" method="POST" autocomplete="off">
             @method('PATCH')
             <x-classroom-form-body :classroom="$classroom" :subjects="$subjects" :sections="$sections" :teachers="$teachers"/>
-            <input type="submit" value="Actualizar">
             </form>
         </div>
       </div>

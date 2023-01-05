@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.create')
 
 @section('title')
     Administrar Materias
