@@ -20,8 +20,6 @@
             <select class="form-control" id="searchOptions" style="font-size:90%">
               <option style="font-size:90%">ID</option>
               <option style="font-size:90%">Nombre</option>
-              <option style="font-size:90%">Email</option>
-              <option style="font-size:90%">Rol</option>
             </select>
           </div>
           <div class="form-group justify-content-end w-50" style="margin-left:40px">

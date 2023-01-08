@@ -5,5 +5,5 @@
     <input name="name" type="text" class="form-control" id="name" aria-describedby="name" placeholder="..." value="{{ $section->name }}">
   </div>
   <br>
-  <button type="submit" class="btn btn-primary">Guardar</button>
+  <button type="submit" class="btn btn-primary">Actualizar</button>
 </form> 

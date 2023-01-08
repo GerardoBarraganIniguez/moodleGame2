@@ -43,6 +43,7 @@
           <tbody>
             @foreach ($classrooms as $classroom)
                 <tr>
+                    <td>{{ $classroom->id }}</td>
                     <td>{{ $classroom->subject->name }}</td>
                     <td>{{ $classroom->section->name }}</td>
                     <td>{{ $classroom->teacher->name}}</td> <!-- esta relacion esta en el modelo Classroom -->
