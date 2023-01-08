@@ -26,5 +26,6 @@
             <hr>
             @yield('sidebar-options')
         </aside>
+        @yield('content')
     </body>
 </html>
