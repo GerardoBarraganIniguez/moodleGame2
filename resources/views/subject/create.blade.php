@@ -9,18 +9,6 @@
 @endsection
 
 @section('content')
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="#">
-            <img src="/img/LogoSuperior2.png" alt="" class="custom-img">
-        </a>
-        <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav">
-            <li class="nav-item active">
-            <a class="nav-link" href="#" style="padding-left: 1140px">Cerrar sesión</a>
-            </li>
-        </ul>
-        </div>
-    </nav>
     
     <div class="frame" style="padding-top: 15px" >
         <div class="container">
