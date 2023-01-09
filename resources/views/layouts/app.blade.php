@@ -17,7 +17,23 @@
     </header>
     <body class="overflow-hidden">
         {{-- @yield('content') --}}
-        <aside class="container-fluid bg-dark text-white min-vh-100 m-0 " style="width: 200px">
+        <div class="container-fluid h-100">
+            <div class="row h-100">
+                <aside class="container-fluid bg-dark text-white min-vh-100 m-0 " style="width: 20%; position: fixed; height: 100%; float: left; display: flex; flex-direction: column;">
+                    <div class="row text-center">
+                        <div class="col p-0">
+                            <h2 class="mb-0 mt-2">@yield('user')</h2>
+                        </div>
+                    </div>
+                    <hr>
+                    @yield('sidebar-options')
+                </aside>
+                <div class="main-content" style="position:fixed; width:80%; height:100%; margin-left:20%; overflow-y:auto; background-color: #0303034d">
+                    @yield('content')
+                </div>
+            </div>
+        </div>
+        {{--<aside class="container-fluid bg-dark text-white min-vh-100 m-0 " style="width: 200px">
             <div class="row text-center">
                 <div class="col p-0">
                     <h2 class="mb-0 mt-2">@yield('user')</h2>
@@ -25,7 +41,6 @@
             </div>
             <hr>
             @yield('sidebar-options')
-        </aside>
-        @yield('content')
+        </aside>--}}
     </body>
 </html>

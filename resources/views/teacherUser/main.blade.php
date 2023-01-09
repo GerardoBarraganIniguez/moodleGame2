@@ -17,45 +17,99 @@
 @endsection
 
 @section('content')
-<p class="text-danger">holas</p>
-{{-- <div class="container-fluid h-100">
-    <div class="row h-100">
-        <div class="sidebar">
-            <div class="sidebar-list1">
-                <h5 style="margin:10px">Clases</h5>
-                <a href="{{ route('classrooms_students.create', auth()->user()) }}">Unirse a clase</a>
-            </div>
-            <div class="sidebar-line"></div>
-            <div class="sidebar-list2">
-                <h5 style="margin:10px">Tareas pendientes</h5>
-            </div>
-            <div class="sidebar-bottom">
-                <p>Bienvenido {{ auth()->user()->name }}</p>
-                <a href="#" style="color: white">Cerrar sesión</a>
-            </div>
-        </div>
 
-        <div class="main-content">
-          @foreach (auth()->user()->classrooms as $classroom)
-            <div class="rectangle-container">
-              <div class="rectangle">
-                  <div class="title w-100">{{ $classroom->subject->name}} <br>{{ $classroom->teacher->name }}</div>
-                  {{-- <div class="list">
-                    <ul>
-                      <li>Tarea 1</li>
-                      <li>Tarea 2</li>
-                      <li>Tarea 3</li>
-                    </ul>
-                  </div>
-                  <div class="separation">
-                      <li>Mis calificaciones</li>
-                      <li>Abandonar clase</li>
-                  </div> --}}
-              {{-- </div>
-            </div>  --}}
-            {{-- <td>{{ $classroom->subject->name }}</td> --}}
-          {{-- @endforeach                   
-        </div> 
+{{-- Aqui inicia la primera fila --}}
+
+<div class="rectangle-container" style="display:flex; justify-content:center">
+    <div class="rectangle" style="width: 300px; height: 250px; margin: 15px; border: 2px solid black; background-color: white; border-radius: 4px;">
+        <div class="title w-100" style="background-color: lightgray; text-align: center; padding: 10px;">Nombre clase <br>Nombre profesor</div>
+        <div class="list" style="margin: 10px">
+          <ul>
+            <li>Tarea 1</li>
+            <li>Tarea 2</li>
+            <li>Tarea 3</li>
+          </ul>
+        </div>
+        <div class="separation" style="border-top: 1px solid gray; padding-top: 10px; margin: 10px">
+            <li>Mis calificaciones</li>
+            <li>Abandonar clase</li>
+        </div>
     </div>
-</div> --}} 
+    <div class="rectangle" style="width: 300px; height: 250px; margin: 15px; border: 2px solid black; background-color: white; border-radius: 4px;">
+        <div class="title w-100" style="background-color: lightgray; text-align: center; padding: 10px;">Nombre clase <br>Nombre profesor</div>
+        <div class="list" style="margin: 10px">
+          <ul>
+            <li>Tarea 1</li>
+            <li>Tarea 2</li>
+            <li>Tarea 3</li>
+          </ul>
+        </div>
+        <div class="separation" style="border-top: 1px solid gray; padding-top: 10px; margin: 10px">
+            <li>Mis calificaciones</li>
+            <li>Abandonar clase</li>
+        </div>
+    </div>
+    <div class="rectangle" style="width: 300px; height: 250px; margin: 15px; border: 2px solid black; background-color: white; border-radius: 4px;">
+        <div class="title w-100" style="background-color: lightgray; text-align: center; padding: 10px;">Nombre clase <br>Nombre profesor</div>
+        <div class="list" style="margin: 10px">
+          <ul>
+            <li>Tarea 1</li>
+            <li>Tarea 2</li>
+            <li>Tarea 3</li>
+          </ul>
+        </div>
+        <div class="separation" style="border-top: 1px solid gray; padding-top: 10px; margin: 10px">
+            <li>Mis calificaciones</li>
+            <li>Abandonar clase</li>
+        </div>
+    </div>
+</div>
+
+{{-- Aqui inicia la segunda fila --}}
+
+<div class="rectangle-container" style="display:flex; justify-content:center">
+    <div class="rectangle" style="width: 300px; height: 250px; margin: 15px; border: 2px solid black; background-color: white; border-radius: 4px;">
+        <div class="title w-100" style="background-color: lightgray; text-align: center; padding: 10px;">Nombre clase <br>Nombre profesor</div>
+        <div class="list" style="margin: 10px">
+          <ul>
+            <li>Tarea 1</li>
+            <li>Tarea 2</li>
+            <li>Tarea 3</li>
+          </ul>
+        </div>
+        <div class="separation" style="border-top: 1px solid gray; padding-top: 10px; margin: 10px">
+            <li>Mis calificaciones</li>
+            <li>Abandonar clase</li>
+        </div>
+    </div>
+    <div class="rectangle" style="width: 300px; height: 250px; margin: 15px; border: 2px solid black; background-color: white; border-radius: 4px;">
+        <div class="title w-100" style="background-color: lightgray; text-align: center; padding: 10px;">Nombre clase <br>Nombre profesor</div>
+        <div class="list" style="margin: 10px">
+          <ul>
+            <li>Tarea 1</li>
+            <li>Tarea 2</li>
+            <li>Tarea 3</li>
+          </ul>
+        </div>
+        <div class="separation" style="border-top: 1px solid gray; padding-top: 10px; margin: 10px">
+            <li>Mis calificaciones</li>
+            <li>Abandonar clase</li>
+        </div>
+    </div>
+    <div class="rectangle" style="width: 300px; height: 250px; margin: 15px; border: 2px solid black; background-color: white; border-radius: 4px;">
+        <div class="title w-100" style="background-color: lightgray; text-align: center; padding: 10px;">Nombre clase <br>Nombre profesor</div>
+        <div class="list" style="margin: 10px">
+          <ul>
+            <li>Tarea 1</li>
+            <li>Tarea 2</li>
+            <li>Tarea 3</li>
+          </ul>
+        </div>
+        <div class="separation" style="border-top: 1px solid gray; padding-top: 10px; margin: 10px">
+            <li>Mis calificaciones</li>
+            <li>Abandonar clase</li>
+        </div>
+    </div>
+</div>
+
 @endsection
