@@ -10,7 +10,7 @@
     <header>
       <nav class="navbar navbar-dark bg-dark">
          <div class="container-fluid">
-            <a class="navbar-brand">Logo</a>  
+            <img src="/img/logo_barra.png" alt="Logo" style="width: 120px;"> 
             <button class="btn btn-outline-light" type="button">Cerrar Sesión</button>
         </div> 
       </nav>
