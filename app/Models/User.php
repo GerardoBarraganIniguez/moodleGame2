@@ -43,15 +43,21 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
-    //relationships
+    //***********relationships********************
     public function role()
     {
         return $this->belongsTo(Role::class);
     }
 
     //student-classroom
-    public function classrooms()
+    public function student_classrooms()
     {
         return $this->belongsToMany(Classroom::class, 'classroom_student');
+    }
+
+    //un profesor pertenece a varios classrooms
+    public function teacher_classrooms()
+    {
+        return $this->hasMany(Classroom::class, 'user_id');
     }
 }
