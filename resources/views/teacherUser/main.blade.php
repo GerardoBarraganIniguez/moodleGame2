@@ -19,9 +19,9 @@
 @section('content')
 
 <div class="rectangle-container" style="display:flex; justify-content:center;">
-@foreach (auth()->user()->teacher_classrooms as $classroom) 
+@foreach ($classrooms as $classroom) 
     <div class="rectangle" style="width: 300px; height: 250px; margin: 15px; border: 2px solid black; background-color: white; border-radius: 4px;">
-        <div class="title w-100" style="background-color: lightgray; text-align: center; padding: 10px;">{{ $classroom->subject_id }} <br>Nombre profesor</div>
+        <div class="title w-100" style="background-color: lightgray; text-align: center; padding: 10px;">{{ $classroom->subject->name }} <br>{{ $classroom->section->name }}</div>
         <div class="list" style="margin: 10px">
           <ul>
             <li>Tarea 1</li>
@@ -34,8 +34,9 @@
             <li>Abandonar clase</li>
         </div>
     </div>
-    {{-- {{ dd(auth()->user()->teacher_classrooms) }} --}}
 @endforeach
+{{  $classrooms->links()  }}
+
 </div>
 
 
