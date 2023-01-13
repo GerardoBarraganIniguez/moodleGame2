@@ -11,7 +11,10 @@
       <nav class="navbar navbar-dark bg-dark">
          <div class="container-fluid">
             <img src="/img/logo_barra.png" alt="Logo" style="width: 120px;"> 
-            <button class="btn btn-outline-light" type="button">Cerrar Sesión</button>
+            <form action="{{ route('login.logout') }}" method="POST">
+                @csrf
+                <button class="btn btn-outline-light" type="submit">Cerrar Sesión</button>
+            </form>
         </div> 
       </nav>
     </header>
