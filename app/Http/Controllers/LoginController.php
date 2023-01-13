@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
+use Symfony\Component\Console\Input\Input;
 
 class LoginController extends Controller
 {
@@ -22,7 +23,8 @@ class LoginController extends Controller
                 return view('studentUser.main');
             }
             if(auth()->user()->role_id == 3){ //si es maestro
-                return view('teacherUser.main');
+                $classrooms = auth()->user()->teacher_classrooms()->paginate(2); //resultados de una relación
+                return view('teacherUser.main', compact('classrooms'));
             }
         }
         else{ //si no existe el user
