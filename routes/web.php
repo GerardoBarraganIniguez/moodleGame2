@@ -37,9 +37,10 @@ Route::get('/users/{user}/edit',[UserController::class, 'edit'])->name('users.ed
 Route::patch('/users/{user}',[UserController::class, 'update'])->name('users.update');
 Route::delete('/users/{user}',[UserController::class, 'destroy'])->name('users.destroy');
 
-//Login
+//Login y logout
 Route::get('/login/create',[LoginController::class, 'index'])->name('login.index');
 Route::post('/login',[LoginController::class, 'store'])->name('login.store');
+Route::post('/logout',[LoginController::class, 'logout'])->name('login.logout');
 
 //subjects
 Route::get('/subjects',[SubjectController::class, 'index'])->name('subjects.index');
