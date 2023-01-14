@@ -31,7 +31,7 @@
                     <hr>
                     @yield('sidebar-options')
                 </aside>
-                <div class="main-content d-flex align-items-center justify-content-center" style="position:fixed; width:80%; height:100%; margin-left:20%; overflow-y:auto; background-color: #0303034d">
+                <div class="main-content d-flex align-items-center justify-content-center" style="position:fixed; width:80%; height:100%; margin-left:20%; overflow-y:auto; background-color: #0303034d; flex-direciton:column">
                     @yield('content')
                 </div>
             </div>
