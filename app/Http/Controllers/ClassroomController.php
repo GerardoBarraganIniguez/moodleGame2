@@ -54,9 +54,15 @@ class ClassroomController extends Controller
         return redirect()->route('classrooms.index');
     }
     
-    public function destroy(Classroom $classroom)
+    public function destroy(Classroom $classroom, User $user)
     {
-        $classroom->delete();
-        return redirect()->route('classrooms.index');
+        if($user->role_id == 1){ //si es admin
+            $classroom->delete();
+            return redirect()->route('classrooms.index');
+        }
+        if($user->role_id == 3){ //si es maestro
+            $classroom->delete();
+            return redirect()->route('showClassrooms.index');
+        }
     }
 }
