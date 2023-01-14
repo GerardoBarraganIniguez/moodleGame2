@@ -51,7 +51,7 @@
                     {{-- <td><a href="{{ route('exams.create', $classroom) }}">Crear Examen</a></td> --}}
                     <td><a href="{{ route('classrooms.edit', $classroom) }}" class="btn btn-primary">Editar</a></td>
                     <td>
-                        <form action="{{ route('classrooms.destroy', $classroom) }}" method="POST" autocomplete="off">
+                        <form action="{{ route('classrooms.destroy', [$classroom, auth()->user()]) }}" method="POST" autocomplete="off">
                             @csrf
                             @method('DELETE')
                             <input type="submit" value="Eliminar" class="btn btn-danger">

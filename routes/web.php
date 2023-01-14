@@ -65,7 +65,7 @@ Route::get('/classrooms/create',[ClassroomController::class, 'create'])->name('c
 Route::post('/classrooms',[ClassroomController::class, 'store'])->name('classrooms.store');
 Route::get('/classrooms/{classroom}/edit',[ClassroomController::class, 'edit'])->name('classrooms.edit');
 Route::patch('/classrooms/{classroom}',[ClassroomController::class, 'update'])->name('classrooms.update');
-Route::delete('/classrooms/{classroom}',[ClassroomController::class, 'destroy'])->name('classrooms.destroy');
+Route::delete('/classrooms/{classroom}/{user}',[ClassroomController::class, 'destroy'])->name('classrooms.destroy');
 
 //assignments
 Route::get('/assignments',[AssignmentController::class, 'index'])->name('assignments.index');
@@ -88,5 +88,5 @@ Route::get('/classrooms_students',[ClassroomStudentController::class, 'index'])-
 Route::get('/classrooms_students/{user}/create',[ClassroomStudentController::class, 'create'])->name('classrooms_students.create');
 Route::post('/classrooms_students/{user}',[ClassroomStudentController::class, 'store'])->name('classrooms_students.store');
 
-//Teachers-classrooms
+//ShowClassrooms (students and teachers)
 Route::get('/showClassrooms',[ShowClassroomsController::class, 'index'])->name('showClassrooms.index');

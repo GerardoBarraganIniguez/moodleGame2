@@ -31,7 +31,11 @@
         </div>
         <div class="separation" style="border-top: 1px solid gray; padding-top: 10px; margin: 10px">
             <li>Mis calificaciones</li>
-            <li>Abandonar clase</li>
+            <form action="{{ route('classrooms.destroy', [$classroom, auth()->user()]) }}" method="POST">
+                @csrf
+                @method('DELETE')
+                <input type="submit" value="Abandonar Clase" class="btn btn-danger">
+            </form>
         </div>
     </div>
 @endforeach
