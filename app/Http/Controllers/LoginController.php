@@ -21,10 +21,10 @@ class LoginController extends Controller
                 return view('adminUser.main');
             }
             if(auth()->user()->role_id == 2){ //si es estudiante
-                return view('studentUser.main');
+                return redirect()->route('showClassrooms.index'); //se hizo asi por el problema con la paginacion por el POST
             }
             if(auth()->user()->role_id == 3){ //si es maestro
-                return redirect()->route('classrooms_teachers.index'); //se hizo asi por el problema con la paginacion por el POST
+                return redirect()->route('showClassrooms.index'); //se hizo asi por el problema con la paginacion por el POST
             }
         }
         else{ //si no existe el user
