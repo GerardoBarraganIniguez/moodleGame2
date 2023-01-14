@@ -35,8 +35,7 @@
         </div>
     </div>
 @endforeach
-{{  $classrooms->links()  }}
-
+{{  $classrooms->links('pagination::simple-bootstrap-5')  }}
 </div>
 
 
