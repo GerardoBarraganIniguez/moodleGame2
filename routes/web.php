@@ -2,10 +2,10 @@
 
 use App\Http\Controllers\ClassroomController;
 use App\Http\Controllers\ClassroomStudentController;
-use App\Http\Controllers\ClassroomTeacherController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\RoleController;
 use App\Http\Controllers\SectionController;
+use App\Http\Controllers\ShowClassroomsController;
 use App\Http\Controllers\SubjectController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
@@ -89,4 +89,4 @@ Route::get('/classrooms_students/{user}/create',[ClassroomStudentController::cla
 Route::post('/classrooms_students/{user}',[ClassroomStudentController::class, 'store'])->name('classrooms_students.store');
 
 //Teachers-classrooms
-Route::get('/classrooms_teachers',[ClassroomTeacherController::class, 'index'])->name('classrooms_teachers.index');
+Route::get('/showClassrooms',[ShowClassroomsController::class, 'index'])->name('showClassrooms.index');
