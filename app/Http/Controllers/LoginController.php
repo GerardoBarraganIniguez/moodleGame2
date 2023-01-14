@@ -24,8 +24,7 @@ class LoginController extends Controller
                 return view('studentUser.main');
             }
             if(auth()->user()->role_id == 3){ //si es maestro
-                $classrooms = auth()->user()->teacher_classrooms()->paginate(2); //resultados de una relación
-                return view('teacherUser.main', compact('classrooms'));
+                return redirect()->route('classrooms_teachers.index'); //se hizo asi por el problema con la paginacion por el POST
             }
         }
         else{ //si no existe el user
@@ -40,4 +39,6 @@ class LoginController extends Controller
         $request->session()->regenerateToken();
         return view('auth.login');
     }
+
+    
 }
