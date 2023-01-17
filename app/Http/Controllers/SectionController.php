@@ -9,7 +9,7 @@ class SectionController extends Controller
 {
     public function index()
     {
-        $sections = Section::all();
+        $sections = Section::paginate(5);
         return view('section.index', compact('sections'));
     }
 
