@@ -9,7 +9,7 @@ class SubjectController extends Controller
 {
     public function index()
     {
-        $subjects = Subject::all();
+        $subjects = Subject::paginate(5);
         return view('subject.index', compact('subjects'));
     }
 

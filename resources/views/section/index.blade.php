@@ -53,6 +53,13 @@
             @endforeach
           </tbody>
         </table>
-        <a href="{{ route('sections.create') }}" class="btn btn-primary">Agregar nueva seccion</a>
+        <form class="d-flex justify-content-between">
+          <div class="form-group">
+            <a href="{{ route('sections.create') }}" class="btn btn-primary">Agregar nueva seccion</a>
+          </div>
+          <div>
+            {{  $sections->links('pagination::simple-bootstrap-5')  }}
+          </div>
+        </form>
       </div>
 @endsection

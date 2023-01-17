@@ -56,6 +56,13 @@
             @endforeach
           </tbody>
         </table>
-        <a href="{{ route('subjects.create') }}" class="btn btn-primary">Agregar nueva materia</a>
+        <form class="d-flex justify-content-between">
+          <div class="form-group">
+            <a href="{{ route('subjects.create') }}" class="btn btn-primary">Agregar nueva materia</a>
+          </div>
+          <div>
+            {{  $subjects->links('pagination::simple-bootstrap-5')  }}
+          </div>
+        </form>
       </div>
 @endsection

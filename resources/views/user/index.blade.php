@@ -61,12 +61,12 @@
             @endforeach
           </tbody>
         </table>
-        <form class="d-flex">
+        <form class="d-flex justify-content-between">
           <div class="form-group">
             <a href="{{ route('users.create') }}" class="btn btn-primary" >Agregar nuevo usuario</a>
           </div>
-          <div class="form-group justify-content-end w-50" style="padding-left:680px">
-            {{  $users->links()  }}
+          <div>
+            {{  $users->links('pagination::simple-bootstrap-5')  }}
           </div>
         </form>
       </div>
