@@ -36,6 +36,10 @@
                     @method('DELETE')
                     <input type="submit" value="Abandonar Clase" class="btn btn-danger">
                 </form>
+                <form action="{{ route('ClassroomsView.index', $classroom) }}" method="GET">
+                    @csrf
+                    <input type="submit" value="Ir a Clase" class="btn btn-success">
+                </form>
             </div>
         </div>
     @endforeach

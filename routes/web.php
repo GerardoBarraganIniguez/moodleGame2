@@ -1,7 +1,10 @@
 <?php
 
+use App\Http\Controllers\AssignmentController;
 use App\Http\Controllers\ClassroomController;
+use App\Http\Controllers\ClassroomsLessonController;
 use App\Http\Controllers\ClassroomStudentController;
+use App\Http\Controllers\ClassroomsViewController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\RoleController;
 use App\Http\Controllers\SectionController;
@@ -90,3 +93,10 @@ Route::post('/classrooms_students/{user}',[ClassroomStudentController::class, 's
 
 //ShowClassrooms (students and teachers)
 Route::get('/showClassrooms',[ShowClassroomsController::class, 'index'])->name('showClassrooms.index');
+
+//Classroom View
+Route::get('/classroomsView/{classroom}',[ClassroomsViewController::class, 'index'])->name('ClassroomsView.index');
+
+//Classroom Lesson teacher
+Route::get('/classroomsLesson/{classroom}',[ClassroomsLessonController::class, 'index'])->name('classroomsLesson.index');
+
