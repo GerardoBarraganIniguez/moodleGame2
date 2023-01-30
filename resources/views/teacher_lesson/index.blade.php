@@ -45,14 +45,15 @@
                     <td>{{ $assignment->id }}</td>
                     <td>{{ $assignment->name }}</td>
                     <td>{{ $assignment->description }}</td>
-                    <td><a href="{{ route('assignments.edit', $assignment) }}" class="btn btn-primary">Editar</a></td>
+                    <td><a href="{{ route('assignmentsAddSlides.index', [$classroom,$assignment]) }}" class="btn btn-primary">Agregar diapositivas</a></td>
+                    {{-- <td><a href="{{ route('assignments.edit', $assignment) }}" class="btn btn-primary">Editar</a></td>
                     <td>
                         <form action="{{ route('assignments.destroy', [$assignment, auth()->user()]) }}" method="POST" autocomplete="off">
                             @csrf
                             @method('DELETE')
                             <input type="submit" value="Eliminar" class="btn btn-danger">
                         </form>
-                    </td>
+                    </td> --}}
                 </tr>
             @endforeach
           </tbody>

@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AssignmentAddSlidesController;
 use App\Http\Controllers\AssignmentController;
 use App\Http\Controllers\ClassroomController;
 use App\Http\Controllers\ClassroomsLessonController;
@@ -78,6 +79,10 @@ Route::get('/assignments/{assignment}/edit',[AssignmentController::class, 'edit'
 Route::patch('/assignments/{assignment}',[AssignmentController::class, 'update'])->name('assignments.update');
 Route::delete('/assignments/{assignment}',[AssignmentController::class, 'destroy'])->name('assignments.destroy');
 
+//agregar dipaositivas a las lecciones
+Route::get('/assignmentsAddSlides/{classroom}/{assignment}',[AssignmentAddSlidesController::class, 'index'])->name('assignmentsAddSlides.index');
+Route::post('/assignmentsAddSlides/{assignment}',[AssignmentAddSlidesController::class, 'store'])->name('assignmentsAddSlides.store');
+
 //exams
 Route::get('/exams',[ExamController::class, 'index'])->name('exams.index');
 Route::get('/exams/{classroom}/create',[ExamController::class, 'create'])->name('exams.create');
@@ -99,4 +104,5 @@ Route::get('/classroomsView/{classroom}',[ClassroomsViewController::class, 'inde
 
 //Classroom Lesson teacher
 Route::get('/classroomsLesson/{classroom}',[ClassroomsLessonController::class, 'index'])->name('classroomsLesson.index');
+Route::post('/classroomsLess/{classroom}',[ClassroomsLessonController::class, 'store'])->name('classroomsLess.store');
 
