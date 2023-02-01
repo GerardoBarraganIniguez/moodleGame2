@@ -29,6 +29,6 @@ class ClassroomStudentController extends Controller
             'classroom_id' => $request->classroom_id
         ]);
 
-        return redirect()->route('classrooms_students.index');
+        return redirect()->route('showClassrooms.index');
     }
 }

@@ -13,13 +13,13 @@ class AssignmentAddSlidesController extends Controller
     {
         return view('assignmentAddSlides.index', compact('classroom','assignment'));
     }
-    public function store(Request $request, Assignment $assignment)
+    public function store(Request $request, Assignment $assignment, Classroom $classroom)
     {
         AssignmentInfo::create([
             'assignment_id' => $assignment->id,
             'textbox_description' => $request->slide
         ]);
 
-        return 'registros agregado';
+        return redirect()->route('classroomsLesson.index', compact('classroom'));
     }
 }

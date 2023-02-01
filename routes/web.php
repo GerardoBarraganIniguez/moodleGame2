@@ -81,7 +81,7 @@ Route::delete('/assignments/{assignment}',[AssignmentController::class, 'destroy
 
 //agregar dipaositivas a las lecciones
 Route::get('/assignmentsAddSlides/{classroom}/{assignment}',[AssignmentAddSlidesController::class, 'index'])->name('assignmentsAddSlides.index');
-Route::post('/assignmentsAddSlides/{assignment}',[AssignmentAddSlidesController::class, 'store'])->name('assignmentsAddSlides.store');
+Route::post('/assignmentsAddSlides/{assignment}/{classroom}',[AssignmentAddSlidesController::class, 'store'])->name('assignmentsAddSlides.store');
 
 //exams
 Route::get('/exams',[ExamController::class, 'index'])->name('exams.index');

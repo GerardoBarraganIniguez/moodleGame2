@@ -13,7 +13,7 @@
 @endsection
 
 @section('sidebar-options')
-    
+    <a href="{{ route('classrooms_students.create', auth()->user()->id) }}">Unirse a una clase</a>
 @endsection
 
 @section('content')
@@ -31,7 +31,10 @@
           </div>
           <div class="separation" style="border-top: 1px solid gray; padding-top: 10px; margin: 10px">
               <li>Mis calificaciones</li>
-              <li>Abandonar clase</li>
+              <form action="{{ route('ClassroomsView.index', $classroom) }}" method="GET">
+                @csrf
+                <input type="submit" value="Ir a Clase" class="btn btn-success">
+            </form>
           </div>
       </div>
   @endforeach

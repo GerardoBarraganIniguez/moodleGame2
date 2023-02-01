@@ -14,7 +14,7 @@
         <div class="row">
             <div class="col-md-12">
                 <h5 style="padding-top: 15px">Agregar diapositivas</h5>
-                <form action="{{ route('assignmentsAddSlides.store', $assignment) }}" method="POST">
+                <form action="{{ route('assignmentsAddSlides.store', [$assignment, $classroom]) }}" method="POST">
                     @csrf
                     <textarea name="slide" id="slide" cols="30" rows="10"></textarea>
                     <input type="submit" value="Terminar" class="btn btn-primary" id="btn-submit">
