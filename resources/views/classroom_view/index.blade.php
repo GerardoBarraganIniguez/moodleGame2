@@ -20,7 +20,7 @@
           </a>
         </li>
         <li>
-          <a href="{{ route('subjects.index') }}" class="nav-link text-white mb-3 option">
+          <a href="{{ route('classroomsExam.index', $classroom) }}" class="nav-link text-white mb-3 option">
             Exámenes
           </a>
         </li>

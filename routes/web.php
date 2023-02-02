@@ -3,9 +3,12 @@
 use App\Http\Controllers\AssignmentAddSlidesController;
 use App\Http\Controllers\AssignmentController;
 use App\Http\Controllers\ClassroomController;
+use App\Http\Controllers\ClassroomsExamController;
 use App\Http\Controllers\ClassroomsLessonController;
 use App\Http\Controllers\ClassroomStudentController;
 use App\Http\Controllers\ClassroomsViewController;
+use App\Http\Controllers\ExamAddQuestionsController;
+use App\Http\Controllers\ExamController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\RoleController;
 use App\Http\Controllers\SectionController;
@@ -91,6 +94,10 @@ Route::get('/exams/{exam}/edit',[ExamController::class, 'edit'])->name('exams.ed
 Route::patch('/exams/{exam}',[ExamController::class, 'update'])->name('exams.update');
 Route::delete('/exams/{exam}',[ExamController::class, 'destroy'])->name('exams.destroy');
 
+//agregar preguntas a examenes
+Route::get('/examsAddQuestions/{classroom}/{exam}',[ExamAddQuestionsController::class, 'index'])->name('examsAddQuestions.index');
+Route::post('/examsAddQuestions/{exam}/{classroom}',[ExamAddQuestionsController::class, 'store'])->name('examsAddQuestions.store');
+
 //Student-Classroom
 Route::get('/classrooms_students',[ClassroomStudentController::class, 'index'])->name('classrooms_students.index');
 Route::get('/classrooms_students/{user}/create',[ClassroomStudentController::class, 'create'])->name('classrooms_students.create');
@@ -105,4 +112,7 @@ Route::get('/classroomsView/{classroom}',[ClassroomsViewController::class, 'inde
 //Classroom Lesson teacher
 Route::get('/classroomsLesson/{classroom}',[ClassroomsLessonController::class, 'index'])->name('classroomsLesson.index');
 Route::post('/classroomsLess/{classroom}',[ClassroomsLessonController::class, 'store'])->name('classroomsLess.store');
+
+Route::get('/classroomsExam/{classroom}',[ClassroomsExamController::class, 'index'])->name('classroomsExam.index');
+Route::post('/classroomsExa/{classroom}',[ClassroomsExamController::class, 'store'])->name('classroomsExa.store');
 
